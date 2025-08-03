@@ -1,32 +1,70 @@
-# Title
-A Python package to perform TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) analysis.
+# Topsis-Abhiraj-Singh-Jhajj-102217094
 
-# Description
-This package implements the TOPSIS method for Multi-Criteria Decision-Making (MCDM). It takes an input dataset, weights, and impacts to calculate scores and ranks for the provided alternatives, helping users to make better decisions.
+`Topsis-Abhiraj-Singh-Jhajj-102217094` is a Python package that implements the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) method for multi-criteria decision making. This tool is ideal for evaluating and ranking alternatives based on multiple criteria, which is essential in fields like supply chain management, finance, and engineering.
 
-# Features
-Implements the TOPSIS method for decision-making.
-Supports both positive and negative impacts.
-Provides a simple command-line interface for easy usage.
+## Installation
 
-# Installation
-Explain how users can install your package. Include steps for installation via pip.
+You can install `Topsis-Abhiraj-Singh-Jhajj-102217094` directly from the Python Package Index using pip:
 
-pip install Topsis-YourName-RollNumber
+pip install Topsis-Abhiraj-Singh-Jhajj-102217094
 
-If the package isn’t uploaded to pypi yet, include instructions for installing it from the source code:
-git clone https://github.com/abhirajsinghjhajj/Topsis_Abhiraj_Singh_Jhajj_102217094.git
-cd Topsis_Abhiraj_Singh_Jhajj_102217094
-pip install .
 
-# Usage
-Provide examples of how to use the package or run the program. Include command-line usage examples.
-Example:
-python 101556.py 101556-data.csv "1,1,1,2" "+,+,-,+" 101556-result.csv
+## Usage
 
-Explain what each parameter means:
-101556.py: The Python script file.
-101556-data.csv: The input file containing the data.
-"1,1,1,2": Weights for each criterion.
-"+,+,-,+": Impacts for each criterion (+ for benefit, - for cost).
-101556-result.csv: The output file to save the result.
+### Command Line Interface
+
+To use the package from command line, you need to prepare your data in CSV or Excel format where the first column contains the names/labels of the alternatives, and the subsequent columns contain the criteria values.
+
+Using the CLI program
+python 102217094.py data-1.xlsx "1,2,3,1,2" "+,+,-,+,+" 102217094-result.csv
+
+Using the installed package
+topsis data.csv "1,2,3" "+,-,+" results.csv
+
+
+### Python Script Usage
+
+from topsis_Abhiraj_102217094 import topsis_analysis
+
+Perform TOPSIS analysis
+result = topsis_analysis('data.csv', '1,2,3,1,2', '+,+,-,+,+', 'result.csv')
+
+
+## Parameters
+
+- **Input file**: CSV or Excel file with alternatives and criteria
+- **Weights**: Comma-separated string of weights for each criterion (e.g., "1,2,3,1,2")
+- **Impacts**: Comma-separated string of impacts for each criterion:
+  - `+` indicates that higher values are better
+  - `-` indicates that lower values are better
+- **Output file**: Path where results will be saved
+
+## Example
+
+Given a dataset with 5 criteria (P1, P2, P3, P4, P5):
+
+python 102217094.py 102217094-data.csv "1,2,3,1,2" "+,+,-,+,+" 102217094-result.csv
+
+
+## Features
+
+- **Easy integration** with Pandas DataFrames
+- **Customizable weights** and criteria impacts
+- **Automatic normalization** and ranking of alternatives
+- **Command line interface** for easy access and usage
+- **Support for both CSV and Excel** input files
+- **Comprehensive error handling** and validation
+
+## Repository
+
+GitHub: [abhirajsinghjhajj/Topsis_Abhiraj_Singh_Jhajj_102217094](https://github.com/abhirajsinghjhajj/Topsis_Abhiraj_Singh_Jhajj_102217094)
+
+## Author
+
+**Abhiraj Singh Jhajj** (102217094)
+- Email: abhirajsinghjhajj@gmail.com
+- GitHub: [@abhirajsinghjhajj](https://github.com/abhirajsinghjhajj)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
